@@ -85,7 +85,7 @@ nav .nav-hidden {
     }
 
     nav li:hover div, .nav-active div {
-        padding: 19px 0;
+        padding: 20px 0;
     }
 
     nav li:hover div a, .nav-active div a {
