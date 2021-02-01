@@ -33,7 +33,15 @@ nav a {
 
 nav li {
     padding: 0;
-    margin-top: 15px;
+    margin-top: 20px;
+}
+
+nav li div a {
+    color: gray;
+}
+
+nav li:hover div a, .nav-active div a {
+    color: black;
 }
 
 nav .nav-toggle {
@@ -75,10 +83,6 @@ nav .nav-hidden {
         padding: 20px 0;
     }
 
-    nav li div a {
-        color: gray;
-    }
-
     nav li:hover, nav .nav-active {
         border-bottom: 4px solid black;
 
@@ -86,10 +90,6 @@ nav .nav-hidden {
 
     nav li:hover div, .nav-active div {
         padding: 19px 0;
-    }
-
-    nav li:hover div a, .nav-active div a {
-        color: black;
     }
 
     nav .nav-hidden {
