@@ -11,6 +11,10 @@ body {
 }
 
 nav {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
     background: ghostwhite;
     padding: 15px;
 }
@@ -23,7 +27,6 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    font-size: 1.1em;
 }
 
 nav a {
@@ -36,12 +39,17 @@ nav li {
     margin-top: 20px;
 }
 
-nav li div a {
+nav li a {
     color: gray;
+    font-size: 1.1em;
 }
 
-nav li:hover div a, .nav-active div a {
+nav li:hover > div a, nav .nav-active > div a {
     color: black;
+}
+
+nav li ul {
+    margin-left: 20px;
 }
 
 nav .nav-toggle {
@@ -69,27 +77,45 @@ nav .nav-hidden {
         margin-right: 30px;
     }
 
-    nav ul {
+    nav > ul {
         float: left;
         padding: 0;
     }
 
-    nav li {
+    nav > ul > li {
         float: left;
         margin: 0 15px;
+        position: relative;
     }
 
-    nav li div {
+    nav > ul > li > div {
         padding: 20px 0;
     }
 
-    nav li:hover, nav .nav-active {
+    nav > ul > li:hover > div, nav > ul > .nav-active > div{
         border-bottom: 4px solid black;
-
     }
 
-    nav li:hover div, .nav-active div {
-        padding: 20px 0;
+    nav li:hover ul {
+        display: block;
+    }
+
+    nav li ul {
+        display: none;
+        position: absolute;
+        z-index: 2;
+        background: white;
+        padding: 0;
+        margin: 0;
+        white-space: nowrap;
+        border: 1px solid rgba(0,0,0,.55);
+        border-radius: 3px;
+        top: 55px;
+    }
+
+    nav li li {
+        margin: 0px;
+        padding: 10px;
     }
 
     nav .nav-hidden {
@@ -105,6 +131,7 @@ hr {
 
 .container {
     margin: 0 auto;
+    margin-top: 50px;
     padding: 10px;
     max-width: 640px;
 }
@@ -154,6 +181,7 @@ hr {
 
 .gallery-image {
     border: 1px solid rgba(0,0,0,.55);
+    border-radius: 3px;
     padding: 5px;
     padding-bottom: 2px;
     box-shadow: 3px 3px 6px #999999;
@@ -161,8 +189,12 @@ hr {
     background-color: white;
 }
 
+img, .maps {
+    border-radius: 3px;
+}
+
 .gallery-image-title {
-    z-index: 100;
+    z-index: 1;
     padding: 5px;
     position: absolute;
     bottom: 0px;
@@ -170,10 +202,34 @@ hr {
     font-size: 0.8em;
     color: #212529;
     background-color: white;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.title-1 {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.subtitle-1 {
+    font-size: 1.2em;
+    font-style: italic;
+    text-align: center;
+    margin: 10px;
+}
+
+.title-1-hr {
+    border: 0;
+    margin-bottom: 80px;
 }
 
 .title-2 {
-    font-size: 1.8em;
+    font-size: 2em;
+    font-weight: bolder;
+    text-align: center;
 }
 
 .title-3 {
@@ -187,7 +243,7 @@ hr {
 
 .footer {
     text-align: center;
-    padding: 10px 0px;
+    padding: 10px;
 }
 
 .footer .copyright {
