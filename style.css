@@ -184,3 +184,16 @@ hr {
     margin-top: 20px;
     font-size: 1.3em;
 }
+
+.footer {
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.footer .copyright {
+    font-size: 0.8em;
+}
+
+.footer .copyright a {
+    color: #000000;
+}
