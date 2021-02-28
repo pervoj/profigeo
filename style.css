@@ -203,6 +203,16 @@ img, .maps {
     border-radius: 3px;
 }
 
+.maps > div {
+    margin: auto;
+    text-align: center;
+}
+
+.maps > div > svg {
+    width: 100px;
+    height: 100px;
+}
+
 .gallery-image-title {
     z-index: 1;
     padding: 5px;
