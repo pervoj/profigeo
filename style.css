@@ -242,6 +242,49 @@ img, .maps {
     font-size: 1.3em;
 }
 
+.accordion, .accordion-titleonly {
+    background-color: #eee;
+    color: #444;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.accordion {
+    cursor: pointer;
+}
+
+.accordion:hover, .accordion.accordion-active, .accordion-titleonly:hover {
+    background-color: #ddd;
+}
+
+.accordion::before {
+    content: '+';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.accordion.accordion-active::before {
+    content: '-';
+}
+
+.accordion-panel {
+    border: 1px solid #ddd;
+    border-top: none;
+    margin-bottom: 20px;
+    margin-top: 0;
+    padding: 15px 35px;
+}
+
+.accordion-panel-hidden {
+    display: none;
+}
+
 .footer {
     text-align: center;
     padding: 10px;
